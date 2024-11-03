@@ -1,0 +1,12 @@
+build
+test.exe
+test.cpp
+main2.cpp
+out
+.vscode
+Random Project.code-workspace
+builds
+exit
+.junk
+.vs
+issues
