@@ -18,12 +18,15 @@ public:
     void update(double delta_time);
     void draw();
     void background();
+    
+
 private:
+    Ground grass;
     SDL_Window *m_window;
     SDL_Surface *m_window_surface;
     SDL_Event m_window_event;
     SDL_Texture *skytexture;
     SDL_Renderer *renderimg;
     StickFigure Figure;
-    Ground grass;
+    
 };

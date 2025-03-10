@@ -10,10 +10,8 @@ p_displayer(_display)
     
     // g_texture = SDL_CreateTextureFromSurface(renderer, surface);
     // SDL_SetTextureBlendMode(g_texture,SDL_BLENDMODE_MOD);
-  
     // _destination.x=*x;
     // _destination.y=*y;
-
 }
 
 void Ground::draw(int x,int y){

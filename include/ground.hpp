@@ -7,12 +7,13 @@ class Ground{
     Ground(SDL_Renderer *_display);
     void draw(int x,int y);
     void groundcleanup();
-
+    int grassheight = 100;
     private:
     const int *x;
     const int *y;
     SDL_Texture *g_texture;
     SDL_Renderer *p_displayer;
     SDL_Rect _destination;
+    
     
 };

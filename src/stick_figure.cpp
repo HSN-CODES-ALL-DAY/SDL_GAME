@@ -2,16 +2,14 @@
 #include <iostream>
 #include "window.hpp"
 #include <png.h>
-
-
-
+#include "ground.hpp"
 
 StickFigure::StickFigure(SDL_Renderer *__renderstick):figure(__renderstick)
 {
 
     m_image = IMG_LoadTexture(figure,"gfx/characters/Stick_figure-removebg-preview.png");
 
-
+    
     m_position.x = 0;
     m_position.y = 0;   
     m_position.w = 100;
@@ -26,8 +24,8 @@ StickFigure::StickFigure(SDL_Renderer *__renderstick):figure(__renderstick)
 void StickFigure::update(double delta_time)
 {
 switch(m_direction)
-
-    {        case Direction::NONE:
+    {        
+        case Direction::NONE:
             m_x += 0.0;
             m_y += 0.0;
             break;
@@ -48,7 +46,7 @@ switch(m_direction)
 
     m_position.x = (int)m_x;
     m_position.y = (int)m_y;
-    if(m_y<(HEIGHT - 100 - 150))
+    if(m_y<(HEIGHT - 100))
     m_y +=GRAVITY*delta_time;
     // std::cout << "\rPosition X: " << m_position.x <<' ';
     // std::cout << "Position Y: " << m_position.y <<' ' ;
@@ -83,7 +81,7 @@ void StickFigure::draw()
     // SDL_RenderCopy(figure,m_image,NULL,&m_position);
     
     // m_image = IMG_LoadTexture(figure,"gfx/characters/Stick_figure.png");
-    
+    //if git ignore doesn't work git rm -r --cached .
     SDL_RenderCopyEx(figure, m_image, NULL, &m_position, angle, NULL, fliper());
 
 }

@@ -85,7 +85,7 @@ void window::draw() {
     
     background();
     for (int i = -25; i <= 825; i+=100){
-    grass.draw(i,HEIGHT - 100);
+    grass.draw(i,HEIGHT - grass.grassheight);
     }
     Figure.draw();
     
